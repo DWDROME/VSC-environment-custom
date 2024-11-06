@@ -1,2 +1,2 @@
-# VSC-environment-custom-
-一些配置更改让vscode更加顺手
+# VSC-environment-custom
+一些配置更改让vsc更加顺手

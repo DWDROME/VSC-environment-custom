@@ -1,0 +1,226 @@
+---
+Language: Cpp # 设置为 C++ 语言
+# BasedOnStyle:  Google
+AccessModifierOffset: -1 # 访问修饰符的缩进偏移
+AlignAfterOpenBracket: Align # 在括号后对齐
+AlignArrayOfStructures: None # 数组结构的对齐方式
+AlignConsecutiveMacros: None # 连续宏的对齐方式
+AlignConsecutiveAssignments: None # 连续赋值语句的对齐方式
+AlignConsecutiveBitFields: None # 连续位字段的对齐方式
+AlignConsecutiveDeclarations: None # 连续声明的对齐方式
+AlignEscapedNewlines: Left # 转义换行符的对齐方式
+AlignOperands: Align # 操作数的对齐方式
+AlignTrailingComments: true # 是否对齐尾部注释
+AllowAllArgumentsOnNextLine: true # 是否允许所有参数换行
+AllowAllParametersOfDeclarationOnNextLine: true # 是否允许所有声明参数换行
+AllowShortEnumsOnASingleLine: true # 允许短枚举在单行
+AllowShortBlocksOnASingleLine: Never # 控制短代码块在单行的行为
+AllowShortCaseLabelsOnASingleLine: false # 是否允许短的 case 标签在单行
+AllowShortFunctionsOnASingleLine: All # 允许短函数在单行
+AllowShortLambdasOnASingleLine: All # 允许短 lambda 表达式在单行
+AllowShortIfStatementsOnASingleLine: WithoutElse # 没有 else 的短 if 语句可以在单行
+AllowShortLoopsOnASingleLine: true # 允许短循环在单行
+AlwaysBreakAfterDefinitionReturnType: None # 定义返回类型后是否总是换行
+AlwaysBreakAfterReturnType: None # 返回类型后是否总是换行
+AlwaysBreakBeforeMultilineStrings: true # 多行字符串之前总是换行
+AlwaysBreakTemplateDeclarations: Yes # 模板声明总是换行
+AttributeMacros:
+    - __capability # 属性宏定义
+BinPackArguments: true # 是否将多个函数调用参数打包在一行
+BinPackParameters: true # 是否将多个声明参数打包在一行
+BraceWrapping: # 大括号换行控制
+    AfterCaseLabel: false # case 标签后不换行
+    AfterClass: false # 类定义后不换行
+    AfterControlStatement: Never # 控制语句后从不换行
+    AfterEnum: false # 枚举后不换行
+    AfterFunction: false # 函数后不换行
+    AfterNamespace: false # 命名空间后不换行
+    AfterObjCDeclaration: false # Objective-C 声明后不换行
+    AfterStruct: false # 结构体后不换行
+    AfterUnion: false # 联合体后不换行
+    AfterExternBlock: false # extern 块后不换行
+    BeforeCatch: false # catch 之前不换行
+    BeforeElse: false # else 之前不换行
+    BeforeLambdaBody: false # lambda 表达式主体之前不换行
+    BeforeWhile: false # while 之前不换行
+    IndentBraces: false # 不缩进大括号
+    SplitEmptyFunction: true # 空函数换行
+    SplitEmptyRecord: true # 空记录换行
+    SplitEmptyNamespace: true # 空命名空间换行
+BreakBeforeBinaryOperators: None # 二元操作符之前不换行
+BreakBeforeConceptDeclarations: true # 概念声明之前换行
+BreakBeforeBraces: Attach # 大括号紧跟在控制语句、函数等右侧
+BreakBeforeInheritanceComma: false # 继承列表的逗号前不换行
+BreakInheritanceList: BeforeColon # 继承列表在冒号前换行
+BreakBeforeTernaryOperators: true # 三元操作符之前换行
+BreakConstructorInitializersBeforeComma: false # 构造函数初始化器的逗号前不换行
+BreakConstructorInitializers: BeforeColon # 构造函数初始化器在冒号前换行
+BreakAfterJavaFieldAnnotations: false # Java 字段注解后不换行
+BreakStringLiterals: true # 字符串字面量换行
+ColumnLimit: 100 # 每行代码字符限制为 80
+CommentPragmas: '^ IWYU pragma:' # 注释中的编译指令
+QualifierAlignment: Leave # 限定符的对齐方式
+CompactNamespaces: false # 是否使用紧凑的命名空间
+ConstructorInitializerIndentWidth: 4 # 构造函数初始化器的缩进宽度
+ContinuationIndentWidth: 4 # 换行时的额外缩进宽度
+Cpp11BracedListStyle: true # 使用 C++11 大括号初始化列表的风格
+DeriveLineEnding: true # 自动检测行尾格式
+DerivePointerAlignment: true # 自动检测指针对齐方式
+DisableFormat: false # 是否禁用格式化
+EmptyLineAfterAccessModifier: Never # 访问修饰符后不加空行
+EmptyLineBeforeAccessModifier: LogicalBlock # 访问修饰符前加空行
+ExperimentalAutoDetectBinPacking: false # 是否启用实验性的自动检测打包
+PackConstructorInitializers: NextLine # 构造函数初始化器放在下一行
+BasedOnStyle: '' # 不基于任何已有样式，完全自定义
+ConstructorInitializerAllOnOneLineOrOnePerLine: false # 初始化器不强制一行
+AllowAllConstructorInitializersOnNextLine: true # 允许所有构造函数初始化器在下一行
+FixNamespaceComments: true # 修正命名空间的注释
+ForEachMacros:
+    - foreach
+    - Q_FOREACH
+    - BOOST_FOREACH # 循环宏定义
+IfMacros:
+    - KJ_IF_MAYBE # if 宏定义
+IncludeBlocks: Regroup # 包含块的组织方式
+IncludeCategories: # 包含的排序优先级
+    - Regex: '^<ext/.*\.h>'
+      Priority: 2
+      SortPriority: 0
+      CaseSensitive: false
+    - Regex: '^<.*\.h>'
+      Priority: 1
+      SortPriority: 0
+      CaseSensitive: false
+    - Regex: '^<.*'
+      Priority: 2
+      SortPriority: 0
+      CaseSensitive: false
+    - Regex: '.*'
+      Priority: 3
+      SortPriority: 0
+      CaseSensitive: false
+IncludeIsMainRegex: '([-_](test|unittest))?$' # 主文件的包含正则表达式
+IncludeIsMainSourceRegex: '' # 主文件源的包含正则表达式
+IndentAccessModifiers: false # 不缩进访问修饰符
+IndentCaseLabels: true # 缩进 case 标签
+IndentCaseBlocks: false # 不缩进 case 块
+IndentGotoLabels: true # 缩进 goto 标签
+IndentPPDirectives: None # 预处理指令的缩进方式
+IndentExternBlock: AfterExternBlock # extern 块的缩进方式
+IndentRequires: false # 是否缩进 requires 子句
+IndentWidth: 4 # 缩进宽度
+IndentWrappedFunctionNames: false # 不缩进换行的函数名
+InsertTrailingCommas: None # 不插入尾随逗号
+JavaScriptQuotes: Leave # 保留 JavaScript 引号风格
+JavaScriptWrapImports: true # JavaScript 导入换行
+KeepEmptyLinesAtTheStartOfBlocks: false # 保持块开头的空行
+LambdaBodyIndentation: Signature # lambda 表达式的缩进方式
+MacroBlockBegin: '' # 宏块开始标记
+MacroBlockEnd: '' # 宏块结束标记
+MaxEmptyLinesToKeep: 1 # 保留的最大空行数
+NamespaceIndentation: None # 命名空间的缩进方式
+ObjCBinPackProtocolList: Never # Objective-C 协议列表的打包方式
+ObjCBlockIndentWidth: 2 # Objective-C 块的缩进宽度
+ObjCBreakBeforeNestedBlockParam: true # 在嵌套块参数之前换行
+ObjCSpaceAfterProperty: false # 属性声明后不加空格
+ObjCSpaceBeforeProtocolList: true # 协议列表前加空格
+PenaltyBreakAssignment: 2 # 赋值换行的惩罚值
+PenaltyBreakBeforeFirstCallParameter: 1 # 第一个调用参数前换行的惩罚值
+PenaltyBreakComment: 300 # 注释换行的惩罚值
+PenaltyBreakFirstLessLess: 120 # 第一个 << 操作符换行的惩罚值
+PenaltyBreakOpenParenthesis: 0 # 开括号换行的惩罚值
+PenaltyBreakString: 1000 # 字符串换行的惩罚值
+PenaltyBreakTemplateDeclaration: 10 # 模板声明换行的惩罚值
+PenaltyExcessCharacter: 1000000 # 超出字符数的惩罚值
+PenaltyReturnTypeOnItsOwnLine: 200 # 返回类型单独换行的惩罚值
+PenaltyIndentedWhitespace: 0 # 缩进空格的惩罚值
+PointerAlignment: Left # 指针对齐方式
+PPIndentWidth: -1 # 预处理指令缩进宽度
+RawStringFormats: # 原始字符串格式
+    - Language: Cpp
+      Delimiters:
+          - cc
+          - CC
+          - cpp
+          - Cpp
+          - CPP
+          - 'c++'
+          - 'C++'
+      CanonicalDelimiter: ''
+      BasedOnStyle: google
+    - Language: TextProto
+      Delimiters:
+          - pb
+          - PB
+          - proto
+          - PROTO
+      EnclosingFunctions:
+          - EqualsProto
+          - EquivToProto
+          - PARSE_PARTIAL_TEXT_PROTO
+          - PARSE_TEST_PROTO
+          - PARSE_TEXT_PROTO
+          - ParseTextOrDie
+          - ParseTextProtoOrDie
+          - ParseTestProto
+          - ParsePartialTestProto
+      CanonicalDelimiter: pb
+      BasedOnStyle: google
+ReferenceAlignment: Pointer # 引用对齐方式
+ReflowComments: true # 重新格式化注释
+RemoveBracesLLVM: false # 是否删除 LLVM 样式的大括号
+SeparateDefinitionBlocks: Leave # 定义块的分隔方式
+ShortNamespaceLines: 1 # 短命名空间的行数
+SortIncludes: CaseSensitive # 包含排序的区分大小写
+SortJavaStaticImport: Before # Java 静态导入的排序
+SortUsingDeclarations: true # 使用声明排序
+SpaceAfterCStyleCast: false # C 风格转换后不加空格
+SpaceAfterLogicalNot: false # 逻辑非操作符后不加空格
+SpaceAfterTemplateKeyword: true # 模板关键字后加空格
+SpaceBeforeAssignmentOperators: true # 赋值操作符前加空格
+SpaceBeforeCaseColon: false # case 冒号前不加空格
+SpaceBeforeCpp11BracedList: false # C++11 大括号列表前不加空格
+SpaceBeforeCtorInitializerColon: true # 构造函数初始化器冒号前加空格
+SpaceBeforeInheritanceColon: true # 继承冒号前加空格
+SpaceBeforeParens: ControlStatements # 控制语句前加空格
+SpaceBeforeParensOptions: # 控制各类括号的空格选项
+    AfterControlStatements: true
+    AfterForeachMacros: true
+    AfterFunctionDefinitionName: false
+    AfterFunctionDeclarationName: false
+    AfterIfMacros: true
+    AfterOverloadedOperator: false
+    BeforeNonEmptyParentheses: false
+SpaceAroundPointerQualifiers: Default # 指针限定符周围的空格
+SpaceBeforeRangeBasedForLoopColon: true # 范围 for 循环的冒号前加空格
+SpaceInEmptyBlock: false # 空块内不加空格
+SpaceInEmptyParentheses: false # 空括号内不加空格
+SpacesBeforeTrailingComments: 2 # 尾注释前的空格数
+SpacesInAngles: Never # 角括号内不加空格
+SpacesInConditionalStatement: false # 条件语句中的空格
+SpacesInContainerLiterals: true # 容器字面量中的空格
+SpacesInCStyleCastParentheses: false # C 风格转换括号内不加空格
+SpacesInLineCommentPrefix: # 行注释前的空格
+    Minimum: 1
+    Maximum: -1
+SpacesInParentheses: false # 括号内不加空格
+SpacesInSquareBrackets: false # 方括号内不加空格
+SpaceBeforeSquareBrackets: false # 方括号前不加空格
+BitFieldColonSpacing: Both # 位字段的冒号空格
+Standard: Auto # 自动检测标准
+StatementAttributeLikeMacros: # 类似语句属性的宏
+    - Q_EMIT
+StatementMacros: # 语句宏
+    - Q_UNUSED
+    - QT_REQUIRE_VERSION
+TabWidth: 8 # Tab 宽度
+UseCRLF: false # 不使用 CRLF 换行
+UseTab: Never # 不使用 Tab 缩进
+WhitespaceSensitiveMacros: # 对空格敏感的宏
+    - STRINGIZE
+    - PP_STRINGIZE
+    - BOOST_PP_STRINGIZE
+    - NS_SWIFT_NAME
+    - CF_SWIFT_NAME
+---
+
