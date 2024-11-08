@@ -1,6 +1,5 @@
 ---
 Language: Cpp # 设置为 C++ 语言
-# BasedOnStyle:  Google
 AccessModifierOffset: -1 # 访问修饰符的缩进偏移
 AlignAfterOpenBracket: Align # 在括号后对齐
 AlignArrayOfStructures: None # 数组结构的对齐方式
@@ -26,8 +25,8 @@ AlwaysBreakBeforeMultilineStrings: true # 多行字符串之前总是换行
 AlwaysBreakTemplateDeclarations: Yes # 模板声明总是换行
 AttributeMacros:
     - __capability # 属性宏定义
-BinPackArguments: true # 是否将多个函数调用参数打包在一行
-BinPackParameters: true # 是否将多个声明参数打包在一行
+BinPackArguments: false # 禁用参数打包，允许参数单独换行
+BinPackParameters: false # 禁用声明参数打包
 BraceWrapping: # 大括号换行控制
     AfterCaseLabel: false # case 标签后不换行
     AfterClass: false # 类定义后不换行
@@ -57,7 +56,7 @@ BreakConstructorInitializersBeforeComma: false # 构造函数初始化器的逗�
 BreakConstructorInitializers: BeforeColon # 构造函数初始化器在冒号前换行
 BreakAfterJavaFieldAnnotations: false # Java 字段注解后不换行
 BreakStringLiterals: true # 字符串字面量换行
-ColumnLimit: 100 # 每行代码字符限制为 80
+ColumnLimit: 100 # 每行代码字符限制为 100
 CommentPragmas: '^ IWYU pragma:' # 注释中的编译指令
 QualifierAlignment: Leave # 限定符的对齐方式
 CompactNamespaces: false # 是否使用紧凑的命名空间
@@ -72,7 +71,7 @@ EmptyLineBeforeAccessModifier: LogicalBlock # 访问修饰符前加空行
 ExperimentalAutoDetectBinPacking: false # 是否启用实验性的自动检测打包
 PackConstructorInitializers: NextLine # 构造函数初始化器放在下一行
 BasedOnStyle: '' # 不基于任何已有样式，完全自定义
-ConstructorInitializerAllOnOneLineOrOnePerLine: false # 初始化器不强制一行
+ConstructorInitializerAllOnOneLineOrOnePerLine: true # 初始化器每行一个
 AllowAllConstructorInitializersOnNextLine: true # 允许所有构造函数初始化器在下一行
 FixNamespaceComments: true # 修正命名空间的注释
 ForEachMacros:
@@ -125,7 +124,7 @@ ObjCBreakBeforeNestedBlockParam: true # 在嵌套块参数之前换行
 ObjCSpaceAfterProperty: false # 属性声明后不加空格
 ObjCSpaceBeforeProtocolList: true # 协议列表前加空格
 PenaltyBreakAssignment: 2 # 赋值换行的惩罚值
-PenaltyBreakBeforeFirstCallParameter: 1 # 第一个调用参数前换行的惩罚值
+PenaltyBreakBeforeFirstCallParameter: 100 # 第一个调用参数前换行的惩罚值
 PenaltyBreakComment: 300 # 注释换行的惩罚值
 PenaltyBreakFirstLessLess: 120 # 第一个 << 操作符换行的惩罚值
 PenaltyBreakOpenParenthesis: 0 # 开括号换行的惩罚值
@@ -223,4 +222,3 @@ WhitespaceSensitiveMacros: # 对空格敏感的宏
     - NS_SWIFT_NAME
     - CF_SWIFT_NAME
 ---
-
